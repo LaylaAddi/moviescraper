@@ -15,9 +15,14 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         
-        <% if current_user %>
-        <li><%= link_to "Scrape Data", '#' %></li>
-        <% end %>
+  <% if current_user %>
+        <%= form_tag new_movie_path, :method => 'get', class: "navbar-form navbar-left" do %>
+        <%= text_field_tag :search, params[:movie_url], class: "form-control", placeholder: "Rotten URL" %>
+        <%= submit_tag "Scrape", :name => nil, class: "btn btn-default" %>
+        <%= link_to "or New Movie", new_movie_path, class: "btn btn-default" %>
+
+      <% end %>
+     <% end %>
         
       </ul>
       
