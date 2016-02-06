@@ -17,6 +17,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'validate_url', '~> 1.0', '>= 1.0.2'
+gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
 
 #gem 'will_paginate', '~> 3.1'
 #gem 'bootstrap-will_paginate', '~> 0.0.10'

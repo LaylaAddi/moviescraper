@@ -1,0 +1,33 @@
+.buttonCall {
+    display: inline-block;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00bbff), color-stop(100%,#0090de));
+    background: -moz-linear-gradient(center top, #00bbff 0%, #0090de 100%);
+    -webkit-box-shadow: 0px 1px 1px 1px #45e3ff inset, 0px 2px 3px 2px #c4c4c4, 0px -1px 5px 0px #005494 inset;
+    -moz-box-shadow: 0px 1px 1px 1px #45e3ff inset, 0px 2px 3px 2px #c4c4c4, 0px -1px 5px 0px #005494 inset;
+    box-shadow: 0px 1px 1px 1px #45e3ff inset, 0px 2px 3px 2px #c4c4c4, 0px -1px 5px 0px #005494 inset;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    text-shadow: 0px 1px 0px #00ccff;
+    padding: 25px 40px;
+    margin: 5px 5px;
+    border-color: #006ea1;
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
+    font-weight: bold;
+}
+.buttonCall:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00ccff), color-stop(100%,#00a6ff));
+    background: -moz-linear-gradient(center top, #00ccff 0%, #00a6ff 100%);
+}
+.buttonCall:active {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00aeff), color-stop(100%,#00c4ff));
+    background: -moz-linear-gradient(center top, #00aeff 0%, #00c4ff 100%);
+    -webkit-transition: background-color .2s ease-in;
+    -moz-transition: background-color .2s ease-in;
+    -o-transition: background-color .2s ease-in;
+    transition: background-color .2s ease-in;
+}

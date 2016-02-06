@@ -1,5 +1,5 @@
 git add -A
-git commit -m "updated routes included reg controller"
+git commit -m "added scrape model and save method all working good in console"
 git push -u origin master
 git push heroku master
 
