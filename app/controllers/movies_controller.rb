@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+  before_action :authenticate_user!, only: [:edit, :update, :destroy] 
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   before_action :scrape, only: [:new]
   # GET /movies
@@ -40,7 +41,7 @@ class MoviesController < ApplicationController
   # POST /movies
   # POST /movies.json
   def create
-    @movie = Movie.new(movie_params)
+    @movie = current_user.movies.new(movie_params)
 
     respond_to do |format|
       if @movie.save

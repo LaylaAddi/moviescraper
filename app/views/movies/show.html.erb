@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
+  <strong></strong>
   <%= image_tag @movie.image_url %> 
 </p>
 
@@ -41,8 +41,8 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @movie.user_id %>
+  <strong>Data Miner</strong>
+  <%= @movie.user.username %>
 </p>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
