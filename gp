@@ -1,5 +1,5 @@
 git add -A
-git commit -m "scraping in UI, need to clean up views add style"
+git commit -m "adding about - update to footer"
 git push -u origin master
 git push heroku master
 
