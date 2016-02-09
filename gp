@@ -1,5 +1,5 @@
 git add -A
-git commit -m "truncate title in index"
+git commit -m "moved json files"
 git push -u origin master
 git push heroku master
 
