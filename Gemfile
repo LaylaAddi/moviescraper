@@ -23,18 +23,14 @@ gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
 gem 'aws-sdk', '< 2.0'
 gem 'friendly_id', '~> 5.1'
-gem 'aasm', '~> 4.7'
+
 
 #gem 'will_paginate', '~> 3.1'
 #gem 'bootstrap-will_paginate', '~> 0.0.10'
-#gem 'paperclip', '~> 4.3', '>= 4.3.2'
-#gem 'aws-sdk', '< 2.0'
-#gem 'figaro'
-#gem 'masonry-rails'
-#
 
 
 group :development, :test do
+  gem 'dotenv-rails', '~> 2.1'
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
