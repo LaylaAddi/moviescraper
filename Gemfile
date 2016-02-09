@@ -20,6 +20,10 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem 'validate_url', '~> 1.0', '>= 1.0.2'
 gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
 gem 'cancancan', '~> 1.13', '>= 1.13.1'
+gem 'paperclip', '~> 4.3', '>= 4.3.2'
+gem 'aws-sdk', '< 2.0'
+gem 'friendly_id', '~> 5.1'
+gem 'aasm', '~> 4.7'
 
 #gem 'will_paginate', '~> 3.1'
 #gem 'bootstrap-will_paginate', '~> 0.0.10'

@@ -1,5 +1,5 @@
 git add -A
-git commit -m "set up about based on auth"
+git commit -m "add send grid, aws and aasm "
 git push -u origin master
 git push heroku master
 
