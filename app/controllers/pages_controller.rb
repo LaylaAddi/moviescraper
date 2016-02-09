@@ -1,10 +1,7 @@
 class PagesController < ApplicationController
   
   def index
-    if current_user
-      redirect_to movies_path
-    end
-    @movies = Movie.all
+    @movies = Movie.all.last(8)
   end
 
   def about

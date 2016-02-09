@@ -7,7 +7,7 @@
     <tr>
       <th>Title</th>
       <th>Hotness</th>
-      <th>Image>
+      <th>Image</th>
       <th>Synopsis</th>
       <th>Rating</th>
       <th>Genre</th>
@@ -31,8 +31,10 @@
         <td><%= movie.runtime %></td>
         <td><%= movie.user.username %></td>
         <td><%= link_to 'Show', movie %></td>
+        <% if can? :crud, movie %>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

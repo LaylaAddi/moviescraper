@@ -3,4 +3,5 @@ class Movie < ActiveRecord::Base
   validates_presence_of :title
   validates :hotness, :numericality => {:allow_blank => true}
 	validates :image_url, :url => {:allow_blank => true}
+	
 end
