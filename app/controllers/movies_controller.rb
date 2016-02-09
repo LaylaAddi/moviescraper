@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   before_action :authenticate_user!, only: [:edit, :update, :destroy] 
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   before_action :scrape, only: [:new]
-  load_and_authorize_resource
+  
   # GET /movies
   # GET /movies.json
   def index
@@ -37,6 +37,7 @@ class MoviesController < ApplicationController
 
   # GET /movies/1/edit
   def edit
+    authorize! :manage, @movie
   end
 
   # POST /movies
@@ -58,6 +59,7 @@ class MoviesController < ApplicationController
   # PATCH/PUT /movies/1
   # PATCH/PUT /movies/1.json
   def update
+    authorize! :manage, @movie
     respond_to do |format|
       if @movie.update(movie_params)
         format.html { redirect_to @movie, notice: 'Movie was successfully updated.' }
@@ -72,6 +74,7 @@ class MoviesController < ApplicationController
   # DELETE /movies/1
   # DELETE /movies/1.json
   def destroy
+    authorize! :manage, @movie
     @movie.destroy
     respond_to do |format|
       format.html { redirect_to movies_url, notice: 'Movie was successfully destroyed.' }
