@@ -1,5 +1,5 @@
 git add -A
-git commit -m "add send grid, aws and dotenv-rails "
+git commit -m "paperclup model update "
 git push -u origin master
 git push heroku master
 
