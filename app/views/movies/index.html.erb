@@ -23,17 +23,18 @@
       <tr>
         <td><%= movie.title %></td>
         <td><%= movie.hotness %></td>
-        <td><%= image_tag movie.image_url %></td>
-        <td><%= movie.synopsis %></td>
+        <div class="img"><td><%= link_to image_tag(movie.image_url), movie %></td></div>
+        <td><%= truncate(movie.synopsis, :length => 300) %></td>
         <td><%= movie.rating %></td>
         <td><%= movie.genre %></td>
         <td><%= movie.director %></td>
         <td><%= movie.runtime %></td>
         <td><%= movie.user.username %></td>
-        <td><%= link_to 'Show', movie %></td>
+        <td><%= link_to 'Show', movie, class: "btn btn-warning btn-xs"  %></td>
         <% if can? :crud, movie %>
-        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie), class: "btn btn-success btn-xs"  %></td>
+        <td><%= link_to 'Destroy', movie, method: :delete, 
+        data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" %></td>
         <% end %>
       </tr>
     <% end %>

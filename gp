@@ -1,5 +1,5 @@
 git add -A
-git commit -m "added can3 CRUD"
+git commit -m "set up about based on auth"
 git push -u origin master
 git push heroku master
 

@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   end
 
   def about
+    if current_user
+      redirect_to :root
+    end
   end
 
   def contact

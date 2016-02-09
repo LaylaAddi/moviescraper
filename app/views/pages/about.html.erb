@@ -1,166 +1,63 @@
-<!DOCTYPE html>
-<html>
-<head>
-   <title>About Scaper</title>
-   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-   <script src="/scripts/jquery.min.js"></script>
-   <script src="/bootstrap/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<div class = "list-group">
-   <a href = "#" class = "list-group-item active">
-      <h4 class = "list-group-item-heading">
-         Mobile, and Tablet ready apps
-      </h4>
-   </a>
-   
-   <a href = "#" class = "list-group-item">
-      <h4 class = "list-group-item-heading">
-         Feature upgrades and custom design
-      </h4>
-      
-      <p class = "list-group-item-text">
-         Whatever data you need, we can design the right application for your needs.
-      </p>
-   </a>
-   
-   <a href = "#" class = "list-group-item">
-      <h4 class = "list-group-item-heading">
-         Secure user account access with full administration modules available
-      </h4>
-      
-      <p class = "list-group-item-text">
-         security is 
-      </p>
-   </a>
-   
-</div>
-
-<div class = "list-group">
-   <a href = "#" class = "list-group-item active">
-      <h4 class = "list-group-item-heading">
-         Business Website Package
-      </h4>
-   </a>
-   
-   <a href = "#" class="list-group-item">
-      <h4 class = "list-group-item-heading">
-         Free Domain Name Registration
-      </h4>
-      
-      <p class = "list-group-item-text">
-         You will get a free domain registration with website pages.
-      </p>
-   </a>
-   
-   <a href = "#" class = "list-group-item">
-      <h4 class = "list-group-item-heading">24*7 support</h4>
-      <p class = "list-group-item-text">We provide 24*7 support.</p>
-   </a>
-   
-</div>
-
-</body>
-</html>
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>	   
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>	
-    </div>
+<% if !current_user %>
+<div class="jumbotron">
+  <div class="container">
+    <p>
+    Hello Guest User, Thanks for taking the time to look over our 
+    cool app.  below you will find basic instructions and some general areas our 
+    sofware can assist you and your business.
+    </p>
+    <p>
+        This application is designed to mine data from the Rotten Tomatoes website.  
+        all you need to do is visit <%= link_to "Rotten Tomatoes", 
+        "http://www.rottentomatoes.com/", :target => "_blank" %> and find a movie you 
+        would like gather info about, enter the url and scrape.  
+        <br />
+        in this example, we are basically just copying the info from Rotten Tomatoes. 
+        However, if you are in the business of collecting data, we are sure you can see the 
+        benefit of and application like this.
+    </p>
+    <h3>How some may use the data collected.</h3>
+    <ul>
+      <li>
+          populate a website with royalty free content.  
+          get your site set up quickly with news articles, blog posts, job postings
+          or whatever information you need for your site.  the cool thing is, 
+          you can always keep your site up to date with current content with just a few clicks!
+      </li>
+        <li>
+            scrape products from retailer or manufacturer websites to show in their 
+            own website or provide specs/price comparison.
+        </li>
+          <li>
+              scrape business profiles and reviews to track online presence and 
+              reputationscrape people profiles from social networks for tracking online reputation.
+          </li>
+            <li>
+                scrape search engine results for SEO tracking.
+            </li>
+              <li>
+                  monitor specific company pages from social networks to gather what 
+                  people are saying about certain companies and their products.
+              </li>      
+            <li>
+                scrape health physicians from their clinic websites to provide a catalog 
+                of available doctors per specialization and region.
+            </li>
+          <li>
+              scrape job ads from many ATS (Application Tracking System) to build 
+              online directories or provide better targeted ads to their customers.
+          </li>
+        <li>
+            scrape product reviews from retailers to detect fraudulent reviews.
+        </li>
+      <li>
+          scrape news websites to apply custom analysis and curation 
+          (manual or automatic), often with the goal of providing better 
+          targeted news to their audience.
+      </li>
+    </ul>
+    <p>Whatever your datamining needs, Chesnowitz Interactive can build the solution.</p>
+    
   </div>
 </div>
-
-<div id="googleMap" style="height:400px;width:100%;"></div>
-
-<!-- Add Google Maps -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-var myCenter = new google.maps.LatLng(41.878114, -87.629798);
-
-function initialize() {
-var mapProp = {
-  center:myCenter,
-  zoom:12,
-  scrollwheel:false,
-  draggable:false,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-  position:myCenter,
-  });
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>		
-</footer>
-
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 900, function(){
-   
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-    });
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-})
-</script>
-
-</body>
-</html>
+<% end %>
