@@ -33,6 +33,7 @@
         <li><%= link_to "Log In", new_user_session_path %></li>
         <% end %>
         <% if current_user %>
+        <li><%= link_to "My Rotten Movies", um_path %></li>
         <li><%= link_to "Rotten Movies", movies_path %></li>
         <li><%= link_to "About this app", root_path %></li>
         <% end %>

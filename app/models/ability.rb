@@ -9,7 +9,7 @@ class Ability
        if user.admin?
          can :manage, :all
        else
-          can :crud, Movie do |movie|
+          can :manage, Movie do |movie|
           movie.user == user
        end
           can :update, User do |user|

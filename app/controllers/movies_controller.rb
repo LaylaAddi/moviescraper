@@ -3,8 +3,11 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   before_action :scrape, only: [:new]
   
-  # GET /movies
-  # GET /movies.json
+  def user_movies
+    @movies = current_user.movies
+  end
+
+
   def index
     @movies = Movie.all
   end

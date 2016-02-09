@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   get 'pages/contact'
 
-  
+  get "um", to: "movies#user_movies"
 end
