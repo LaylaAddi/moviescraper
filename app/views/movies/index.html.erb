@@ -23,7 +23,7 @@
       <tr>
         <td><%= movie.title %></td>
         <td><%= movie.hotness %></td>
-        <div class="img"><td><%= link_to image_tag(movie.image_url), movie %></td></div>
+        <td><%= link_to image_tag(movie.image_url), movie %></td>
         <td><%= truncate(movie.synopsis, :length => 300) %></td>
         <td><%= movie.rating %></td>
         <td><%= movie.genre %></td>
