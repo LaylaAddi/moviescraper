@@ -1,5 +1,5 @@
 git add -A
-git commit -m "need to fix link from username to profile"
+git commit -m "added some pad to bottom"
 git push -u origin master
 git push heroku master
 
