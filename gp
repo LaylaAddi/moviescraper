@@ -1,5 +1,5 @@
 git add -A
-git commit -m "added some pad to bottom"
+git commit -m "update text"
 git push -u origin master
 git push heroku master
 
