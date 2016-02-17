@@ -24,7 +24,7 @@ gem 'paperclip', '~> 4.3', '>= 4.3.2'
 gem 'aws-sdk', '< 2.0'
 gem 'friendly_id', '~> 5.1'
 gem 'stripe', '~> 1.35', '>= 1.35.1'
-gem 'figaro', '~> 1.1', '>= 1.1.1' #bundle exec figaro install
+
 
 
 #gem 'will_paginate', '~> 3.1'
@@ -34,6 +34,7 @@ gem 'figaro', '~> 1.1', '>= 1.1.1' #bundle exec figaro install
 group :development, :test do
   gem 'dotenv-rails', '~> 2.1'
   gem 'sqlite3'
+  gem 'figaro', '~> 1.1', '>= 1.1.1' #bundle exec figaro install
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Access an IRB console on exception pages or by using <%= console %> in views
