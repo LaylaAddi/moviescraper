@@ -1,6 +1,8 @@
 <h1>New Subscription</h1>
 
 <% if Rails.env.development? %>
+<%= render "cc_dev_form" %>
+<% else %>
 <%= render "cc_form" %>
 <% end %> 
 

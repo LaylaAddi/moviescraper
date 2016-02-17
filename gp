@@ -1,5 +1,5 @@
 git add -A
-git commit -m "push for heroku"
+git commit -m "updted cc new with if/else for development"
 git push origin master
 git push heroku master
 
