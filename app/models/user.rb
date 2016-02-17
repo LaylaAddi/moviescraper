@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
   
   validates :email, :uniqueness => { :case_sensitive => false,
           :message => "Sorry but this email is already in use in our system" }
+          
+  def subscribed?
+    stripe_subscription_id?
+  end
             
           
 end

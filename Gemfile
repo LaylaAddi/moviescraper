@@ -23,6 +23,8 @@ gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
 gem 'aws-sdk', '< 2.0'
 gem 'friendly_id', '~> 5.1'
+gem 'stripe', '~> 1.35', '>= 1.35.1'
+gem 'figaro', '~> 1.1', '>= 1.1.1' #bundle exec figaro install
 
 
 #gem 'will_paginate', '~> 3.1'

@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% if current_user_subscribed? %>
 <% @movies.each do |movie| %>
       <div class="panel panel-default col-md-4">
          <div class="panel-heading">
@@ -12,4 +12,10 @@
             </div>
           <div class="panel-footer">Selected by: <%= movie.user.username %></div>
       </div>
+<% end %>
+
+<% else %>
+
+<h3>Sorry <%= current_user.username %> you need a Starter Plan to check out Movies</h3>
+
 <% end %>

@@ -1,6 +1,7 @@
 <% if current_user %>
 <div class="jumbotron">
   <div class="container">
+    <%= link_to "Subscribe", new_subscription_path, class: 'btn btn-primary' %> 
     <p>
     Hello <%= current_user.username %>, Thanks for taking the time to look over our 
     cool app.  below you will find basic instructions and some general areas our 

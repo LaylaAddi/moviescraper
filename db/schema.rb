@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160209075112) do
+ActiveRecord::Schema.define(version: 20160217101423) do
 
   create_table "movies", force: :cascade do |t|
     t.string   "title"
@@ -51,6 +51,12 @@ ActiveRecord::Schema.define(version: 20160209075112) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
+    t.string   "stripe_id"
+    t.string   "stripe_subscription_id"
+    t.string   "card_last4"
+    t.integer  "card_exp_month"
+    t.integer  "card_exp_year"
+    t.string   "card_brand"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
