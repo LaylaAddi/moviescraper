@@ -1,5 +1,5 @@
 git add -A
-git commit -m "updted cc new with if/else for development2"
+git commit -m "change test card"
 git push origin master
 git push heroku master
 
