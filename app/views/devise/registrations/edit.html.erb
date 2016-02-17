@@ -24,7 +24,27 @@
   </div>
 <% end %>
 
-
+<% if current_user.subscribed? %>
+  <div class="well">
+  <h4>Update your payment method</h4>
+    <small>The card you have saved in our system is:</small>
+      <br />
+    <br />
+      <div>
+        <%= current_user.card_brand %>**** **** **** <%= current_user.card_last4 %>
+      </div>
+      
+      <div>
+        <%= current_user.card_exp_month %> / <%= current_user.card_exp_year %>
+      </div>
+      <br />
+    <br />
+      
+      
+        <%= render 'cc_update' %>
+        
+  </div>      
+<% end %>
 
 <p><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
