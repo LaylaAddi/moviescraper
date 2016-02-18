@@ -16,6 +16,8 @@
 
 <% else %>
 
-<h3>Sorry <%= current_user.username %> you need a Starter Plan to check out Movies</h3>
+<h3 class="text-center">Sorry <%= current_user.username %> you need a Rotten Plan 
+to check out Movies</h3>
+  <%= render 'subscription' %>
 
 <% end %>

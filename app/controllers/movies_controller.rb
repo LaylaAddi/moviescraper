@@ -10,6 +10,8 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
+    @simply_rotten = Plan.find(1)
+    @extremely_rotten = Plan.find(2)
   end
 
   # GET /movies/1

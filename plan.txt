@@ -1,0 +1,2 @@
+Plan.create(plan_name: 'simply_rotten', plan_price: 14)
+Plan.create(plan_name: 'extremely_rotten', plan_price: 29)

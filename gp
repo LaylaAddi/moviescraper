@@ -1,5 +1,5 @@
 git add -A
-git commit -m "update to delete account"
-git push origin master
+git commit -m "added plans table working on forms"
+git push origin plans
 git push heroku master
 

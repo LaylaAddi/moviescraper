@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="panel panel-default p1">
+        <h2 class="text-center">Simply Rotten</h2>
+        <h4 class="text-justify pad15">Sign up for Simply Rotten access to the community.</h4>
+        <br />
+        <div style="text-align: center">
+        <%= link_to "Sign Up Free", new_user_registration_path(plan: @simply_rotten.id), 
+                                    class: "btn btn-danger" %>
+      </div>                               
+    </div>
+  </div>
+  
+      <div class="col-md-4">
+        <div class="panel panel-default  p2">
+       <h2 class="text-center">Extremely Rotten</h2>
+       <h4 class="text-justify pad15">Sign up for Extremel Rotten access to the community</h4>
+        <div style="text-align: center">                  
+        <%= link_to "Pro Account", new_user_registration_path(plan: @extremely_rotten.id), 
+                                           class: "btn btn-danger" %>   
+      </div>                                      
+    </div>
+  </div>  
+ </div>  
