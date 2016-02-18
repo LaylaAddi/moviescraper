@@ -6,7 +6,7 @@ class SubscriptionsController < ApplicationController
   end
 
   def new
-    @simply_rotten = Plan.find(1)
+    
     @extremely_rotten = Plan.find(2)
   end
 
@@ -19,7 +19,7 @@ class SubscriptionsController < ApplicationController
 
     subscription = customer.subscriptions.create(
       source: params[:stripeToken],
-      plan: "2"
+      plan: "extremely_rotten"
     )
 
     options = {
