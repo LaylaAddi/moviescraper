@@ -1,8 +1,4 @@
 <h1>New Subscription</h1>
-<%= hidden_field_tag 'plan', params[:plan_name]  %>
-<% if params[:plan_name] == 'simply_rotten'%>
-<%= render "form_simply_rotten" %>
-<% end %> 
 
 <% if params[:plan_name] == 'extremely_rotten'%>
 <%= render "form_extremely_rotten" %>

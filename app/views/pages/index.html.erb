@@ -65,7 +65,8 @@
     
   </div>
 </div>
-<% else %>
+<% end %>
+<% if !current_user %>
 <div class="jumbotron text-center">
   <div class="container">
     <h1>Just enter any "Rotten Url" and get the data!</h1>
@@ -75,19 +76,4 @@
   </div>
 </div>
 <% end %>
-
-<% @movies.each do |movie| %>
-      <div class="panel panel-default col-md-4">
-         <div class="panel-heading">
-            <h3 class="panel-title">
-              <%= link_to truncate(movie.title, :length => 30), movie %></h3>
-          
-              </div>
-                <div class="panel-body">
-              <%= link_to image_tag(movie.image_url), movie %>
-            </div>
-          <div class="panel-footer">Selected by: <%= link_to movie.user.username, um_path %></div>
-      </div>
-<% end %>
-
 

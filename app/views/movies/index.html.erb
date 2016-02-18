@@ -13,11 +13,13 @@
           <div class="panel-footer">Selected by: <%= movie.user.username %></div>
       </div>
 <% end %>
+<% end %>
 
-<% else %>
+<% if !current_user_subscribed? %>
 
 <h3 class="text-center">Woah <%= current_user.username %>!  you need an Extremely Rotten Plan 
 to check out Movies</h3> 
   <%= render 'subscription' %> 
+
 
 <% end %>
