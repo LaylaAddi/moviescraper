@@ -1,11 +1,13 @@
 class SubscriptionsController < ApplicationController
   before_action :authenticate_user!, except: [:new]
-  before_action :redirect_to_signup, only: [:new]
+  #before_action :redirect_to_signup, only: [:new]
 
   def show
   end
 
   def new
+    @simply_rotten = Plan.find(1)
+    @extremely_rotten = Plan.find(2)
   end
 
   def create

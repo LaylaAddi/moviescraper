@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :movies
+  belongs_to :plan
   validates :username, :uniqueness => { :case_sensitive => false,
             :message => "Sorry but this username has been taken" }
             
