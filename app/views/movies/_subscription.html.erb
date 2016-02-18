@@ -1,23 +1,40 @@
 <div class="row">
   <div class="col-md-4">
-    <div class="panel panel-default p1">
-        <h2 class="text-center">Simply Rotten</h2>
-        <h4 class="text-justify pad15">Sign up for Simply Rotten access to the community.</h4>
-        <br />
-        <div style="text-align: center">
-        <%= link_to "Sign Up Free", new_subscription_path(plan: @simply_rotten.id), 
-                                    class: "btn btn-danger" %>
-      </div>                               
-    </div>
-  </div>
-  
-      <div class="col-md-4">
         <div class="panel panel-default  p2">
-       <h2 class="text-center">Extremely Rotten</h2>
-       <h4 class="text-justify pad15">Sign up for Extremel Rotten access to the community</h4>
-        <div style="text-align: center">                  
-        <%= link_to "Pro Account", new_subscription_path(plan: @extremely_rotten.id), 
-                                           class: "btn btn-danger" %>   
+       <h2 class="text-center">Extremely Rotten Plan</h2>
+       <h4 class="text-justify pad15">Sign up for the Extremely Rotten Plan and get
+       Extremely Rotten access to the community.</h4>
+        <div style="text-align: center">      
+        <%= render 'subscriptions/form_extremely_rotten' %>
+        
+      </div>                                      
+    </div>
+  </div>  
+  
+    <div class="col-md-4 pull-right">
+        <div class="panel panel-default  p2">
+       <h3 class="text-center">Test Credit Cards</h3>
+       <p class="text-justify pad15">
+         Feel free to text out the software using the 
+         credit cards below. Feel free to submit a test card and then remove it 
+         inside your profile, this will allow you to test saving cards, and test the views 
+         available as a "paid" member verses a "free" member. 
+       </p>
+        <div>  
+        <ul>
+          <li>4242424242424242	Visa</li>
+          <li>5555555555554444	MasterCard</li>
+          <li>371449635398431	American Express</li>
+          <li>6011111111111117	Discover</li>
+          <li>
+            <strong>
+            Feel free to change the CVC code and dates.  Make sure that the date is set into the future
+          </li>
+            </strong>
+          <%= link_to "More Test Cards", "https://stripe.com/docs/testing", target: "_blank"%>
+        </ul>
+       
+        
       </div>                                      
     </div>
   </div>  

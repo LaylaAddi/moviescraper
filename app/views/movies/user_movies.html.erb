@@ -1,4 +1,10 @@
-
+<% if current_user_subscribed? %>
+  <% if current_user_subscribed? && !@movies.present? %>
+ <h2>Hey, <%= current_user.username %>.</h2> 
+   <p>Get started by adding a movie.  Just visit <%= link_to "Rotten Tomatoes", 
+        "http://www.rottentomatoes.com/", :target => "_blank" %> and find a movie you 
+        would like gather info about, copy the URL and paste it in the scrape box.</p>
+  <% else %>
 <% @movies.each do |movie| %>
       <div class="panel panel-default col-md-4">
          <div class="panel-heading">
@@ -11,4 +17,13 @@
             </div>
           <div class="panel-footer">Selected by: <%= movie.user.username %></div>
       </div>
+ <% end %>
+<% end %> 
+
+<% else %>
+
+<h3 class="text-center">Sorry <%= current_user.username %> you need an Extremely Rotten Plan 
+to check out Movies</h3>
+  <%= render 'subscription' %>
+
 <% end %>

@@ -1,7 +1,6 @@
 <% if current_user %>
 <div class="jumbotron">
   <div class="container">
-    <%= link_to "Subscribe", new_subscription_path, class: 'btn btn-primary' %> 
     <p>
     Hello <%= current_user.username %>, Thanks for taking the time to look over our 
     cool app.  below you will find basic instructions and some general areas our 
@@ -13,9 +12,14 @@
         "http://www.rottentomatoes.com/", :target => "_blank" %> and find a movie you 
         would like gather info about, enter the url and scrape.  
         <br />
-        in this example, we are basically just copying the info from Rotten Tomatoes. 
+        in this example, we are scraping info from Rotten Tomatoes. 
         However, if you are in the business of collecting data, we are sure you can see the 
         benefit of and application like this.
+        <br />
+        <br />
+        This site also uses sample stripe payment processing that administration to limit 
+        feature access not only based on user status, but on payment status.  
+        Once a User is subscribed they can manage there subscription from their profile page.
     </p>
     <h3>How some may use the data collected.</h3>
     <ul>

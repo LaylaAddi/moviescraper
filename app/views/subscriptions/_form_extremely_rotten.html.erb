@@ -1,4 +1,4 @@
-Extremely Rotten 
+ 
 <%= form_tag subscription_path, id: "payment-form" do %>
 <form action="" method="POST" id="payment-form">
   <span class="payment-errors"></span>
@@ -6,7 +6,7 @@ Extremely Rotten
   <div class="form-row">
     <label>
       <span>Card Number</span>
-      <input value="4012 8888 8888 1881" type="text" size="20" data-stripe="number"/>
+      <input type="text" size="20" data-stripe="number"/>
     </label>
   </div>
 
@@ -20,10 +20,10 @@ Extremely Rotten
   <div class="form-row">
     <label>
       <span>Expiration (MM/YYYY)</span>
-      <input value="12" type="text" size="2" data-stripe="exp-month"/>
+      <input value= "08" type="text" size="2" data-stripe="exp-month"/>
     </label>
     <span> / </span>
-    <input value="2020" type="text" size="4" data-stripe="exp-year"/>
+    <input value= "2023" type="text" size="4" data-stripe="exp-year"/>
   </div>
 
   <button type="submit">Submit Payment</button>
