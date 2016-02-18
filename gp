@@ -1,5 +1,5 @@
 git add -A
-git commit -m "subscription for rottnen plan complete"
+git commit -m "push to heroku"
 git push origin plans
 git push heroku master
 
