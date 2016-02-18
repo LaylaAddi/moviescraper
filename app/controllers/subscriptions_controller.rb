@@ -37,7 +37,7 @@ class SubscriptionsController < ApplicationController
 
     current_user.update(options)
 
-    redirect_to root_path
+    redirect_to root_path, notice: "Your Extremely Rotten subscription has been verified."
   end
 
   def destroy
