@@ -15,3 +15,9 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+  var http = require("http");
+  setInterval(function() {
+      http.get("http://data-scrape.herokuapp.com");
+  }, 300000); // every 5 minutes (300000)
+  
