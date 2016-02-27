@@ -1,5 +1,5 @@
 git add -A
-git commit -m "completed user authentication"
+git commit -m "update to cc instructions"
 git push origin master
 git push heroku master
 
