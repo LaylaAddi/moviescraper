@@ -19,6 +19,10 @@ class MoviesController < ApplicationController
 
   # GET /movies/new
   def new
+    if !current_user.subscribed?  
+      redirect_to movies_path
+      flash[:error] = "Don't be so rotten and subscibe!"
+    end
     if @movie_data.failure == nil
       @movie = Movie.new(
         title: @movie_data.title,
@@ -34,6 +38,7 @@ class MoviesController < ApplicationController
       @movie = Movie.new
       if params[:search]
         @failure = @movie_data.failure
+        flash[:error] = "you gotta enter some info #{current_user.username}"
       end
     end
   end

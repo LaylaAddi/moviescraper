@@ -1,5 +1,5 @@
 class SubscriptionsController < ApplicationController
-  before_action :authenticate_user!, except: [:new]
+  before_action :authenticate_user!
   #before_action :redirect_to_signup, only: [:new]
 
   def show
@@ -37,7 +37,7 @@ class SubscriptionsController < ApplicationController
 
     current_user.update(options)
 
-    redirect_to root_path, notice: "Your Extremely Rotten subscription has been verified."
+    redirect_to movies_path, notice: "Your Extremely Rotten subscription has been verified."
   end
 
   def destroy
