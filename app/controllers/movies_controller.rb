@@ -36,7 +36,7 @@ class MoviesController < ApplicationController
         )
     else
       @movie = Movie.new
-      if params[:search]
+      if params[:search] 
         @failure = @movie_data.failure
         flash[:error] = "you gotta enter some info #{current_user.username}"
       end
